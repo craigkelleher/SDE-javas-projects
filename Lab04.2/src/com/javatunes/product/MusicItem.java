@@ -8,13 +8,13 @@
  */
 package com.javatunes.product;
 
-public class MusicItem
-extends Product {
+public class MusicItem extends Product {
   
   public MusicItem(String code) {
     super(code);
   }
-  
+
+  //makes non abstract, getPrice()
   @Override
   public Double getPrice() {
     return 10.0;

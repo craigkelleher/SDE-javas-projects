@@ -17,19 +17,25 @@ public class WildcardTest {
 
   @Test
   public void testSumNumber() {
+    // Created a collection of number.
+    //List<Number> numbers = new ArrayList<>(); // still works
     Collection<Number> numbers = new ArrayList<>();
+    //numbers.add(7); //autoboxes in the bytecode same as below, it invokes valueOf methods
     numbers.add(Integer.valueOf(7));    // not autoboxing here just for emphasis
-    numbers.add(Double.valueOf(3.14));  // numbers has subtypes in it
-    numbers.add(Long.valueOf(12));      // inheritance 101 (IS-A)
+    numbers.add(Double.valueOf(3.14)); // numbers has subtypes in it
+    numbers.add(Long.valueOf(12));     // inheritance 101 (IS-A)
     
     // sum() expects a Collection<Number> and that's what I'm passing
     // my Collection<Number> can *of course* contain Integers, Doubles, Longs (IS-A)
+    // we are passing a list of number and it expects a collection of number, but list is a subinterface of collection
+    // therefore, list has a Is-A relationship with collection, so no problem
     double result = sum(numbers);
     assertEquals(22.14, result, .001);
   }
   
   @Test
   public void testSumDouble() {
+    // double is a subclass of Number.
     Collection<Double> doubles = new ArrayList<>();
     doubles.add(3.14);
     doubles.add(2.78);
@@ -37,7 +43,7 @@ public class WildcardTest {
     // sum() expects a Collection<Number> but I'm passing a Collection<Double>
     // that should be okay, right?
     
-    // double result = sum(doubles);
+    double result = sum(doubles); //eventhough doubles is a collection. needs more notation for Is-A
     // assertEquals(5.92, result, .001);
   }
   
@@ -46,7 +52,7 @@ public class WildcardTest {
    * that's the Principle of Substitutability and IS-A.
    * BUT WAIT: is Collection<Double> a subclass of Collection<Number> ???
    */
-  private double sum(Collection<Number> values) {
+  private double sum(Collection<? extends Number> values) {
     double sum = 0.0;
     for (Number number : values) {
       sum = sum + number.doubleValue();

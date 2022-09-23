@@ -28,7 +28,18 @@ public class Catalog {
    * A no-matches result should be an empty collection (not null).
    */
   public static Collection<Television> findByBrand(String brand) {
-    return null;
+    // if not sorting/shuffling, may use a linked list instead of array.
+    Collection<Television> result = new ArrayList<>(); //currently an empty array list
+
+    // how would we do a for loop instead of enhanced for loop?
+    // best way to iterate over a collection: enhanced for loop.
+    // for each television in the catalog, and referring each to tv, do whats in braces
+    for (Television tv : catalog){
+      if (tv.getBrand().equals(brand)){
+        result.add(tv);
+      }
+    }
+    return result;
   }
   
   /**
@@ -37,8 +48,16 @@ public class Catalog {
    * A no-brands-passed result should be an empty map (not null).
    */
   public static Map<String,Collection<Television>> findByBrands(String... brands) {
-    return null;
+    Map<String,Collection<Television>> result = new HashMap<>();
+    // for each string in the array brands, and for each element referred to as brand, do stuff in {}
+    for (String brand : brands) {
+      Collection<Television> tvCollection = findByBrand(brand);
+      result.put(brand, tvCollection);       //key vs value
+      // result.put(brand, findByBrand(brand));
+    }
+    return result;
   }
+
 
   /**
    * Returns entire catalog.

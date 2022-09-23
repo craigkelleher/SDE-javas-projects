@@ -8,6 +8,7 @@
  */
 package com.javatunes.product;
 
+//Abstract class cant instantiate, but there can be constructors and abstract methods
 public abstract class Product {
   private String code;
 

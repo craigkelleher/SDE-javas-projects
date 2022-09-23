@@ -8,13 +8,13 @@
  */
 package com.javatunes.product;
 
-public class MediaPlayer
-extends Product {
+public class MediaPlayer extends Product {
   
   public MediaPlayer(String code) {
     super(code);
   }
-  
+
+  // if abstract, override
   @Override
   public Double getPrice() {
     return 50.0;
