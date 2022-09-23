@@ -16,14 +16,16 @@ public class Order {
   public Order(String id) {
     this.id = id;
   }
-  
-  /**
-   * TODO:
-   * get the items from the cart and iterate over them, print each item's product code
-   * get cart total and print
-   */
-  public void processCart(Object reference_to_cart) {
-    
+
+
+  public void processCart(ShoppingCart<? extends Product> cart) {
+    System.out.println("Order: " + getId() + " contains:");
+
+    Collection<? extends Product> cartItems = cart.allItems();
+    for (Product product : cartItems){
+      System.out.println(product.getCode());
+    }
+    System.out.println("Order Total: " + cart.total());
   }
   
   public String getId() {
