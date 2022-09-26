@@ -28,15 +28,8 @@ public class EmployeeFactory {
 
     //reads a map and tries to create correct Employee type via type entry
     String type = inputMap.get("type");
-    //TODO if type is not equal to HE or SE then trhow illegalargument exception
-    //TODO read the name and hireDate form inputMap.
-    // take a string and make it an instance of double class
-    // the map are strings, but hireDate is java.sql.Date
-    //TODO if type is HE, then read and parse rate and hours from inputMap
-    //TODO if type is equal to SE, then read and parse salary from inputMap
-    //TODO create an instance of HourlyEmployee or SalariedEmployee, with the values read from inputting
-    //   the values read from inputMap
 
+    //if (type.equals("SE"))
     if ("SE".equals(type)){
       SalariedEmployee salariedEmp = new SalariedEmployee();
       salariedEmp.setName(inputMap.get("name"));

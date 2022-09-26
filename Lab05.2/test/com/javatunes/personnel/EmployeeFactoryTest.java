@@ -57,7 +57,7 @@ public class EmployeeFactoryTest {
     SalariedEmployee emp = (SalariedEmployee) EmployeeFactory.createEmployee(seMap);
     assertEquals("Jackie", emp.getName());
     assertEquals(Date.valueOf("1990-08-24"), emp.getHireDate());
-    assertEquals(50000.0, emp.getSalary().doubleValue(), 0.001);
+    assertEquals(50000.0, emp.getSalary(), 0.001);
     //.doubleValue makes it do a primative on both sides
   }
   
@@ -90,4 +90,10 @@ public class EmployeeFactoryTest {
       assertNotEquals("INVALID-TYPE","HE" );
     }
   }
+  //@Test(expected = IllegalArgumentException.class)
+  //public void testCreateEmployeeInvalidTypeThrowsIllegalArgumentException() {
+  //  Map<String,String> invalidMap = new HashMap<>(seMap);
+  //  invalidEmployee.put("type", "NE");
+  //  EmployeeFactory.createEmployee(invalidEmployee);
+  //}
 }
