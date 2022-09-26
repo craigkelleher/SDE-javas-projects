@@ -12,36 +12,26 @@ import java.util.ArrayList;
 import java.util.Collection;
 import gov.irs.TaxPayer;
 
-public enum IRSEnum {
+//public or package private (if it doesnt say public, cant make it private)
+enum IRSEnum implements IRS{
   INSTANCE;
-  
-  // BUSINESS CODE
-  private Collection<TaxPayer> payers = new ArrayList<>();
-  
-  public void collectTaxes() {
-    for (TaxPayer payer : payers) {
-      payer.payTaxes();
-    }
-  }
-  
-  public void register(TaxPayer payer) {
-    payers.add(payer);
-  }
-  
-  
-  // not needed – just makes enum look more like regular singleton
-  public static IRSEnum getInstance() {
-    return INSTANCE;
-  }
 
   // so we can see when IRSEnum class is loaded
   static {
     System.out.println("--IRSEnum class loaded");
   }
+
+  // BUSINESS CODE
+  private Collection<TaxPayer> payers = new ArrayList<>();
   
   // so we can see when INSTANCE is created
   IRSEnum() {
     System.out.println("--IRSEnum ctor: the instance has been created");
+  }
+  
+  // not needed ï¿½ just makes enum look more like regular singleton
+  public static IRSEnum getInstance() {
+    return INSTANCE;
   }
   
   /*
@@ -51,5 +41,19 @@ public enum IRSEnum {
    */
   public static void touch() {
     // no-op
+  }
+
+  //overriding the corresponding methods in IRS
+  @Override
+  public void collectTaxes() {
+    for (TaxPayer payer : payers) {
+      payer.payTaxes();
+    }
+  }
+
+  //overriding the corresponding methods in IRS
+  @Override
+  public void register(TaxPayer payer) {
+    payers.add(payer);
   }
 }

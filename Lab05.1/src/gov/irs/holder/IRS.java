@@ -15,7 +15,12 @@ import gov.irs.TaxPayer;
 public class IRS {
   // BUSINESS CODE
   private Collection<TaxPayer> payers = new ArrayList<>();
-  
+
+  // so we can see when the instance is created
+  private IRS() {
+    System.out.println("--IRS ctor: the instance has been created");
+  }
+
   public void collectTaxes() {
     for (TaxPayer payer : payers) {
       payer.payTaxes();
@@ -33,11 +38,6 @@ public class IRS {
     System.out.println("--IRS class loaded");
   }
   
-  // so we can see when the instance is created
-  private IRS() {
-    System.out.println("--IRS ctor: the instance has been created");
-  }
-  
   // only access to the instance - truly lazy, and thread-safe
   public static IRS getInstance() {
     return IRSHolder.instance;
@@ -53,7 +53,7 @@ public class IRS {
   }
   
   private static class IRSHolder {
-    private static IRS instance = new IRS();
+    private static final IRS instance = new IRS();
     
     // so we can see when IRS.IRSHolder class is loaded
     static {
