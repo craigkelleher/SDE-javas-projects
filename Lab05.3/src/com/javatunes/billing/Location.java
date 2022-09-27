@@ -11,3 +11,23 @@ package com.javatunes.billing;
 public enum Location {
   USA, EUROPE, ONLINE
 }
+
+/*
+* @Override
+* public TaxCalculator calculator(){
+*     return new OnlineTax();
+* },
+*
+* @Override
+* public TaxCalculator calculator(){
+ *     return new EuropeTax();
+ * },
+ *
+ * @Override
+ * public TaxCalculator calculator(){
+ *     return new USATax();
+ * }
+*
+* public abstract TaxCalculator calculator();
+*
+* */
