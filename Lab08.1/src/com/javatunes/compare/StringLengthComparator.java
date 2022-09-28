@@ -27,6 +27,10 @@ implements Comparator<String> {
    */
   @Override
   public int compare(String str1, String str2) {
+    //comparator to compare two items. return - or + depending on how sort should handle it
     return str1.length() - str2.length();
+    // if str1 is less than str 2, return negative
+    // if str1 is more than str 2, return positive
+    // if equal, return 0.
   }
 }

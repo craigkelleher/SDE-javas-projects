@@ -13,7 +13,11 @@ public class SimplePrinterTest {
   public static void main(String[] args) {
     Thread thd1 = new Thread(new SimplePrinter());
     thd1.start();
-    
-    // TODO: create another Thread, passing in a lambda as its Runnable - then start it
+
+    Thread thd2 = new Thread(() -> System.out.println("simple-lambda"));
+    //write a lambda that implements a simple lambda that prints lambda
+    //create another Thread, passing in a lambda as its Runnable - then start it
+    thd2.start();
+    //compiler expands anonymous class
   }
 }
