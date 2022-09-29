@@ -8,6 +8,9 @@
  */
 package com.javatunes.catalog;
 
+import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.partitioningBy;
+import static java.util.stream.Collectors.toList;
 import static org.junit.Assert.*;
 import java.util.Collection;
 import java.util.Comparator;
@@ -35,8 +38,9 @@ public class CatalogStreamTest {
   public void testArtistStartsWithSortPrice() {
     List<MusicItem> items = allMusicItems.stream()
       .filter(item -> item.getArtist().startsWith("D"))
-      .sorted(Comparator.comparing(item -> item.getPrice()))
-      .collect(Collectors.toList());
+        //based on item, lets sort based on price
+        .sorted(comparing(item -> item.getPrice()))
+      .collect(toList());
     
     assertEquals(2, items.size());
     assertEquals(Long.valueOf(11), items.get(0).getId());
@@ -51,9 +55,18 @@ public class CatalogStreamTest {
    */
   @Test
   public void testTitleEqualsArtistSortNaturalOrder() {
-    // TODO
+    // Stuff
+    List<MusicItem> items = allMusicItems.stream()
+        .filter(item -> item.getTitle().equals(item.getArtist()))
+        .sorted()
+        .collect(toList());
+
+
+    //assertEquals(2, items.size());
+    //assertEquals(Long.valueOf(6), items.get(0).getId());
+    //assertEquals(Long.valueOf(7), items.get(1).getId());
   }
-  
+
   /**
    * TASK: find all MusicItems whose price is less than 12.00 and sort them by genre (MusicCategory).
    * The natural order of an enum is the order in which they're declared (it's not alphabetical).
@@ -63,7 +76,24 @@ public class CatalogStreamTest {
    */
   @Test
   public void testPriceLessThanSortMusicCategory() {
-    // TODO
+    // Stuff
+    List<MusicItem> items = allMusicItems.stream()
+    .filter(item -> item.getPrice() < 12)
+        .sorted(comparing(MusicItem::getMusicCategory))
+        .collect(toList());
+
+
+    assertEquals(5, items.size());
+    assertEquals(Long.valueOf(7),  items.get(0).getId());
+    System.out.println(items.get(0));
+    assertEquals(Long.valueOf(13), items.get(1).getId());
+    System.out.println(items.get(1));
+    assertEquals(Long.valueOf(16), items.get(2).getId());
+    System.out.println(items.get(2));
+    assertEquals(Long.valueOf(17), items.get(3).getId());
+    System.out.println(items.get(3));
+    assertEquals(Long.valueOf(18), items.get(4).getId());
+    System.out.println(items.get(4));
   }
   
   /**
@@ -73,7 +103,19 @@ public class CatalogStreamTest {
    */
   @Test
   public void testSortMusicCategorySortReleaseDateDesc() {
-    // TODO
+    // stuff
+    List<MusicItem> items = allMusicItems.stream()
+        .filter(item -> item.getMusicCategory() == MusicCategory.ROCK && item.getPrice() < 15.00)
+        .sorted(comparing(MusicItem::getReleaseDate))
+        .collect(toList());
+
+    assertEquals(3, items.size());
+    assertEquals(Long.valueOf(16), items.get(0).getId());
+    System.out.println(items.get(0));
+    assertEquals(Long.valueOf(17), items.get(1).getId());
+    System.out.println(items.get(1));
+    assertEquals(Long.valueOf(8),  items.get(2).getId());
+    System.out.println(items.get(2));
   }
   
   /**
@@ -84,7 +126,28 @@ public class CatalogStreamTest {
    */
   @Test
   public void testPriceGreaterThanSortPriceDescThenMusicCategory() {
-    // TODO
+    // Stuff
+    List<MusicItem> items = allMusicItems.stream()
+        .filter(item -> item.getPrice() > 17.00)
+        .sorted(comparing(MusicItem::getPrice).reversed()
+        .thenComparing(MusicItem::getArtist))
+        .collect(toList());
+
+    assertEquals(7, items.size());
+    assertEquals(Long.valueOf(15), items.get(0).getId());
+    System.out.println(items.get(0));
+    assertEquals(Long.valueOf(12), items.get(1).getId());
+    System.out.println(items.get(1));
+    assertEquals(Long.valueOf(10), items.get(2).getId());
+    System.out.println(items.get(2));
+    assertEquals(Long.valueOf(4),  items.get(3).getId());
+    System.out.println(items.get(3));
+    assertEquals(Long.valueOf(14), items.get(4).getId());
+    System.out.println(items.get(5));
+    assertEquals(Long.valueOf(9),  items.get(5).getId());
+    System.out.println(items.get(5));
+    assertEquals(Long.valueOf(6),  items.get(6).getId());
+    System.out.println(items.get(6));
   }
   
   /**
@@ -95,6 +158,20 @@ public class CatalogStreamTest {
    */
   @Test
   public void testReleaseDateSortArtist() {
-    // TODO
+    // Stuff
+    List<MusicItem> items = allMusicItems.stream()
+        .filter(item -> item.getPrice() < 12.00 && item.getReleaseDate().toString().startsWith("198"))
+        .sorted(comparing(MusicItem::getArtist))
+        .collect(toList());
+
+    assertEquals(4, items.size());
+    System.out.println(items.get(0));
+    assertEquals(Long.valueOf(13), items.get(0).getId());
+    System.out.println(items.get(1));
+    assertEquals(Long.valueOf(18), items.get(1).getId());
+    System.out.println(items.get(2));
+    assertEquals(Long.valueOf(17), items.get(2).getId());
+    System.out.println(items.get(3));
+    assertEquals(Long.valueOf(16), items.get(3).getId());
   }
 }
