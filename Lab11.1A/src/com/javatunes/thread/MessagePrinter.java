@@ -7,17 +7,29 @@
  */
 package com.javatunes.thread;
 
-// TODO: extend the Thread class
-public class MessagePrinter {
+import static com.sun.tools.javac.file.PathFileObject.getSimpleName;
+
+// extend the Thread class
+public class MessagePrinter extends Thread{
   private String message;
-  
+  private int interval = 400;  // default value
+
+  // TODO add a constructor that takes a message and an interval
+
   public MessagePrinter(String message) {
     this.message = message;
-    // TODO: set the thread name [important when debugging]
+    //: set the thread name [important when debugging]
+    setName("Message Printer");
+  }
+
+  public MessagePrinter(String message, int interval) {
+    this(message);
+    this.interval = interval;
+    setName(getClass().getSimpleName());
   }
   
   /**
-   * TODO: implement run() as follows:
+   * implement run() as follows:
    * It should loop 10 times, printing the 'message' field to stdout,
    * then pausing for some interval (in millis) that you choose.
    * 
@@ -25,7 +37,17 @@ public class MessagePrinter {
    * The sleep() method throws InterruptedException, which you need to catch.
    * You can either leave the catch block empty, or print the exception to stdout.
    */
+  @Override
   public void run() {
-    
+    // use that interval. store a value we receive in a constructor in a field if we want to access it by a method
+    for (int i = 0; i < 10; i++){
+      System.out.println(getName() + ": " + message);
+      try{
+        Thread.sleep(interval);
+      }
+      catch (InterruptedException ignored){
+        // more on this later
+      }
+    }
   }
 }
