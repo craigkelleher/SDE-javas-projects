@@ -4,13 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Accumulator/Accumulator.iml" filepath="$PROJECT_DIR$/Accumulator/Accumulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/AccumulatorExercises/AccumulatorExercises.iml" filepath="$PROJECT_DIR$/AccumulatorExercises/AccumulatorExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlgorithmsCheckpoint/AlgorithmsCheckpoint.iml" filepath="$PROJECT_DIR$/AlgorithmsCheckpoint/AlgorithmsCheckpoint.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BowlingGameKata/BowlingGameKata.iml" filepath="$PROJECT_DIR$/BowlingGameKata/BowlingGameKata.iml" />
       <module fileurl="file://$PROJECT_DIR$/EncapsulationDemo/EncapsulationDemo.iml" filepath="$PROJECT_DIR$/EncapsulationDemo/EncapsulationDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/EvilHangman/EvilHangman.iml" filepath="$PROJECT_DIR$/EvilHangman/EvilHangman.iml" />
       <module fileurl="file://$PROJECT_DIR$/HashMaps/HashMaps.iml" filepath="$PROJECT_DIR$/HashMaps/HashMaps.iml" />
       <module fileurl="file://$PROJECT_DIR$/InitialProjects/InitialProjects.iml" filepath="$PROJECT_DIR$/InitialProjects/InitialProjects.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lab04.1/Lab04.1.iml" filepath="$PROJECT_DIR$/Lab04.1/Lab04.1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lab04.2/Lab04.2.iml" filepath="$PROJECT_DIR$/Lab04.2/Lab04.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab05.1/Lab05.1.iml" filepath="$PROJECT_DIR$/Lab05.1/Lab05.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab05.2/Lab05.2.iml" filepath="$PROJECT_DIR$/Lab05.2/Lab05.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab05.3/Lab05.3.iml" filepath="$PROJECT_DIR$/Lab05.3/Lab05.3.iml" />
