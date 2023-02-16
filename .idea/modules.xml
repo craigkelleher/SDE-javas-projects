@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Accumulator/Accumulator.iml" filepath="$PROJECT_DIR$/Accumulator/Accumulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EncapsulationDemo/EncapsulationDemo.iml" filepath="$PROJECT_DIR$/EncapsulationDemo/EncapsulationDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/InitialProjects/InitialProjects.iml" filepath="$PROJECT_DIR$/InitialProjects/InitialProjects.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lab01.7/Lab01.7.iml" filepath="$PROJECT_DIR$/Lab01.7/Lab01.7.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lab02.3/Lab02.3.iml" filepath="$PROJECT_DIR$/Lab02.3/Lab02.3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab03.1/Lab03.1.iml" filepath="$PROJECT_DIR$/Lab03.1/Lab03.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab03.2/Lab03.2.iml" filepath="$PROJECT_DIR$/Lab03.2/Lab03.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab03.3/Lab03.3.iml" filepath="$PROJECT_DIR$/Lab03.3/Lab03.3.iml" />
