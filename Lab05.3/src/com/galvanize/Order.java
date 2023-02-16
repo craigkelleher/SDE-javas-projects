@@ -6,7 +6,7 @@
  * We hope that it's useful to you.  Enjoy.
  * Copyright LearningPatterns Inc.
  */
-package com.javatunes.product;
+package com.galvanize;
 
 import com.javatunes.billing.Location;
 import com.javatunes.billing.TaxCalculator;

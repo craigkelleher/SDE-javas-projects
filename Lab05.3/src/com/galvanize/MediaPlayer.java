@@ -6,17 +6,17 @@
  * We hope that it's useful to you.  Enjoy.
  * Copyright LearningPatterns Inc.
  */
-package com.javatunes.product;
+package com.galvanize;
 
-public class MusicItem extends Product {
+public class MediaPlayer
+extends Product {
   
-  public MusicItem(String code) {
+  public MediaPlayer(String code) {
     super(code);
   }
-
-  //makes non abstract, getPrice()
+  
   @Override
   public Double getPrice() {
-    return 10.0;
+    return 50.0;
   }
 }

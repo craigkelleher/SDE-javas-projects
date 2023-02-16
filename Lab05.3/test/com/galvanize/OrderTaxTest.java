@@ -6,7 +6,7 @@
  * We hope that it's useful to you.  Enjoy.
  * Copyright LearningPatterns Inc.
  */
-package com.javatunes.product;
+package com.galvanize;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
