@@ -1,7 +1,7 @@
 package com.galvanize;
 
 import org.junit.jupiter.api.Test;
-import org.openjdk.jol.vm.VM;
+//import org.openjdk.jol.vm.VM;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
