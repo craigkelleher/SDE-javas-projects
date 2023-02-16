@@ -6,7 +6,7 @@
  * We hope that it's useful to you.  Enjoy.
  * Copyright LearningPatterns Inc.
  */
-package com.javatunes.compare;
+package com.galvanize;
 
 import java.util.Arrays;
 import java.util.Comparator;

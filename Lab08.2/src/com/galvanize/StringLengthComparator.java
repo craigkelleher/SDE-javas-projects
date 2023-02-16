@@ -6,12 +6,11 @@
  * We hope that it's useful to you.  Enjoy.
  * Copyright LearningPatterns Inc.
  */
-package com.javatunes.compare;
+package com.galvanize;
 
 import java.util.Comparator;
 
-public class StringLengthComparator
-implements Comparator<String> {
+public class StringLengthComparator implements Comparator<String> {
 
   /*
    * The contract for Comparator is as follows:
@@ -27,10 +26,6 @@ implements Comparator<String> {
    */
   @Override
   public int compare(String str1, String str2) {
-    //comparator to compare two items. return - or + depending on how sort should handle it
     return str1.length() - str2.length();
-    // if str1 is less than str 2, return negative
-    // if str1 is more than str 2, return positive
-    // if equal, return 0.
   }
 }
