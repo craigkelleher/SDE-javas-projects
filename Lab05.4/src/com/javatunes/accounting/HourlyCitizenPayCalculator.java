@@ -1,8 +1,6 @@
 package com.javatunes.accounting;
 
-import java.util.Map;
-import com.javatunes.personnel.Employee;
-import com.javatunes.personnel.HourlyEmployee;
+import com.galvanize.HourlyEmployee;
 
 public class HourlyCitizenPayCalculator
 implements PayCalculator {

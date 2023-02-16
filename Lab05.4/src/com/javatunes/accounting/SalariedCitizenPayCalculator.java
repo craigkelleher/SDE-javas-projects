@@ -1,10 +1,8 @@
 package com.javatunes.accounting;
 
 import java.sql.Date;
-import java.util.Map;
-import com.javatunes.personnel.Employee;
-import com.javatunes.personnel.HourlyEmployee;
-import com.javatunes.personnel.SalariedEmployee;
+
+import com.galvanize.SalariedEmployee;
 
 public class SalariedCitizenPayCalculator
 implements PayCalculator {

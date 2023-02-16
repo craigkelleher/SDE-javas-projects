@@ -1,7 +1,6 @@
 package com.javatunes.accounting;
 
-import com.javatunes.personnel.Employee;
-import com.javatunes.personnel.SalariedEmployee;
+import com.galvanize.SalariedEmployee;
 
 public class SalariedVisaPayCalculator
 implements PayCalculator {
