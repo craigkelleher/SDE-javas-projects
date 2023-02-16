@@ -6,11 +6,10 @@
  * We hope that it's useful to you.  Enjoy.
  * Copyright LearningPatterns Inc.
  */
-package com.galvanize.util;
+package com.galvanize;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import com.galvanize.Television;
 
 public class TelevisionDisplayAdvisorTest {
 

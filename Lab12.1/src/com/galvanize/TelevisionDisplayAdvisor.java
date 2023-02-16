@@ -6,7 +6,7 @@
  * We hope that it's useful to you.  Enjoy.
  * Copyright LearningPatterns Inc.
  */
-package com.galvanize.util;
+package com.galvanize;
 
 import com.galvanize.Television;
 

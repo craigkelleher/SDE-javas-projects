@@ -8,9 +8,6 @@
  */
 package com.galvanize;
 
-import com.galvanize.Television;
-import com.galvanize.util.TelevisionDisplayAdvisor;
-
 public class TelevisionDisplayAdvisorTest {
   
   public static void main(String[] args) {
