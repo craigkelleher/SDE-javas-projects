@@ -1,8 +1,7 @@
 package com.galvanize;
 
-public class SquareAndSumtInput {
-    public static int squareSum(int[] n)
-    {
+public class SquareAndSumInput {
+    public static int squareSum(int[] n) {
         // Initialize accumulator
         int sum = 0;
         // loop through array
