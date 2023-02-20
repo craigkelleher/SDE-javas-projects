@@ -16,10 +16,10 @@
       <module fileurl="file://$PROJECT_DIR$/InheritanceDemo/InheritanceDemo.iml" filepath="$PROJECT_DIR$/InheritanceDemo/InheritanceDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/InitialProjects/InitialProjects.iml" filepath="$PROJECT_DIR$/InitialProjects/InitialProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/IntroJUnit/IntroJUnit.iml" filepath="$PROJECT_DIR$/IntroJUnit/IntroJUnit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JavaTDDDemo/JavaTDDDemo.iml" filepath="$PROJECT_DIR$/JavaTDDDemo/JavaTDDDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JavaWarmups/JavaWarmups.iml" filepath="$PROJECT_DIR$/JavaWarmups/JavaWarmups.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaTDD.Demo/JavaTDD.Demo.iml" filepath="$PROJECT_DIR$/JavaTDD.Demo/JavaTDD.Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/MutableExample/MutableExample.iml" filepath="$PROJECT_DIR$/MutableExample/MutableExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/OrganizationCheckpoint/OrganizationCheckpoint.iml" filepath="$PROJECT_DIR$/OrganizationCheckpoint/OrganizationCheckpoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Warmups/Warmups.iml" filepath="$PROJECT_DIR$/Warmups/Warmups.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZJavaPlayground/ZJavaPlayground.iml" filepath="$PROJECT_DIR$/ZJavaPlayground/ZJavaPlayground.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/galvanize-workspace.iml" filepath="$PROJECT_DIR$/.idea/galvanize-workspace.iml" />
     </modules>
