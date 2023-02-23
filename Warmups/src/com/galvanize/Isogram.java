@@ -28,11 +28,9 @@ public class Isogram {
     }
 
     public static boolean isIsogramWithHashSet(String str) {
-        Set<Character> letters = new HashSet<Character>();
+        Set<Character> letters = new HashSet<>();
         for (int i = 0; i < str.length(); ++i) {
-            if (letters.contains(str.toLowerCase().charAt(i))) {
-                return false;
-            }
+            if (letters.contains(str.toLowerCase().charAt(i))) return false;
             letters.add(str.charAt(i));
         }
         return true;
