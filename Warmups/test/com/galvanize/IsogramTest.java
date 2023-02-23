@@ -7,13 +7,37 @@ import static org.junit.jupiter.api.Assertions.*;
 class IsogramTest {
     @Test
     public void FixedTests() {
-        assertEquals(true, Isogram.isIsogram("Dermatoglyphics"));
-        assertEquals(true, Isogram.isIsogram("isogram"));
-        assertEquals(false, Isogram.isIsogram("moose"));
-        assertEquals(false, Isogram.isIsogram("isIsogram"));
-        assertEquals(false, Isogram.isIsogram("aba"));
-        assertEquals(false, Isogram.isIsogram("moOse"));
-        assertEquals(true, Isogram.isIsogram("thumbscrewjapingly"));
-        assertEquals(true, Isogram.isIsogram(""));
+        assertTrue(Isogram.isIsogram("Dermatoglyphics"));
+        assertTrue(Isogram.isIsogram("isogram"));
+        assertFalse(Isogram.isIsogram("moose"));
+        assertFalse(Isogram.isIsogram("isIsogram"));
+        assertFalse(Isogram.isIsogram("aba"));
+        assertFalse(Isogram.isIsogram("moOse"));
+        assertTrue(Isogram.isIsogram("thumbscrewjapingly"));
+        assertTrue(Isogram.isIsogram(""));
+    }
+
+    @Test
+    public void isIsogramShortTests() {
+        assertTrue(Isogram.isIsogramShort("Dermatoglyphics"));
+        assertTrue(Isogram.isIsogramShort("isogram"));
+        assertFalse(Isogram.isIsogramShort("moose"));
+        assertFalse(Isogram.isIsogramShort("isIsogram"));
+        assertFalse(Isogram.isIsogramShort("aba"));
+        assertFalse(Isogram.isIsogramShort("moOse"));
+        assertTrue(Isogram.isIsogramShort("thumbscrewjapingly"));
+        assertTrue(Isogram.isIsogramShort(""));
+    }
+
+    @Test
+    public void isIsogramHashSetTests() {
+        assertTrue(Isogram.isIsogramWithHashSet("Dermatoglyphics"));
+        assertTrue(Isogram.isIsogramWithHashSet("isogram"));
+        assertFalse(Isogram.isIsogramWithHashSet("moose"));
+        assertFalse(Isogram.isIsogramWithHashSet("isIsogram"));
+        assertFalse(Isogram.isIsogramWithHashSet("aba"));
+        assertFalse(Isogram.isIsogramWithHashSet("moOse"));
+        assertTrue(Isogram.isIsogramWithHashSet("thumbscrewjapingly"));
+        assertTrue(Isogram.isIsogramWithHashSet(""));
     }
 }

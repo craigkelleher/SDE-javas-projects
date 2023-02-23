@@ -22,4 +22,19 @@ public class Isogram {
         }
         return true;
     }
+
+    public static boolean  isIsogramShort(String str) {
+        return str.length() == str.toLowerCase().chars().distinct().count();
+    }
+
+    public static boolean isIsogramWithHashSet(String str) {
+        Set<Character> letters = new HashSet<Character>();
+        for (int i = 0; i < str.length(); ++i) {
+            if (letters.contains(str.toLowerCase().charAt(i))) {
+                return false;
+            }
+            letters.add(str.charAt(i));
+        }
+        return true;
+    }
 }
