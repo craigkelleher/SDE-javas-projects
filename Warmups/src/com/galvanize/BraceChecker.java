@@ -29,7 +29,7 @@ public class BraceChecker {
             // pop the most recent opening brace from stack
             // compare popped opening brace to current closing brace to see if match, if no match, return false
     // check if stack is empty. If it is, return true because all braces matched
-    // if stack is not empty, return false as atleast one not matched.
+    // return whether stack is empty | false  if not as at least one not matched.
 
     public boolean isValidStack(String braces){
         Stack<Character> stack = new Stack<>();
@@ -42,7 +42,9 @@ public class BraceChecker {
                     return false;
                 }
                 char top = stack.pop();
-                if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) {
+                if ((c == ')' && top != '(') ||
+                        (c == ']' && top != '[') ||
+                        (c == '}' && top != '{')) {
                     return false;
                 }
             }
