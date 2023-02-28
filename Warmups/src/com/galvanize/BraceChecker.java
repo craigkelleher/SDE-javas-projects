@@ -3,24 +3,6 @@ package com.galvanize;
 import java.util.Stack;
 
 public class BraceChecker {
-
-//    public boolean isValid(String braces) {
-//        int count = 0;
-//        for (int i = 0; i < braces.length(); i++) {
-//            char c = braces.charAt(i);
-//            if (c == '(' || c == '[' || c == '{') {
-//                count++;
-//            } else if (c == ')' || c == ']' || c == '}') {
-//                count--;
-//            }
-//            if (count < 0) {
-//                return false;
-//            }
-//        }
-//        return count == 0;
-//    }
-
-
     // Create a new stack to keep track of opening braces
     // loop through each character in input string:
         // if character is opening brace, push onto stack
@@ -50,5 +32,25 @@ public class BraceChecker {
             }
         }
         return stack.empty();
+    }
+
+    // while loop through the string loop while there are still balanced together braces
+    // when there are (inside the loop) remove all instances of balanced braces that are together with ""
+    // {} () []
+    // when done looping check the length of the remaining string
+    // return true if the length is zero
+
+    public boolean isValid(String braces){
+        while(braces.contains("{}") || braces.contains("()") || braces.contains("[]")){
+            braces = braces.replace("{}", "").replace("()", "").replace("[]", "");
+        }
+        return braces.length() == 0;
+    }
+
+    public boolean isValid2(String braces){
+        for(int i = 0; i < braces.length(); i++){
+            braces = braces.replace("{}", "").replace("()", "").replace("[]", "");
+        }
+        return braces.isEmpty();
     }
 }
