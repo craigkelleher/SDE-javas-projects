@@ -20,7 +20,7 @@ public class LargestSortedString {
         return result.toString();
     }
 
-    public static String longestv2 (String s1, String s2) {
+    public static String longestV2 (String s1, String s2) {
         String newString = s1 + s2;
         char[] chars = newString.toCharArray();
         Arrays.sort(chars);

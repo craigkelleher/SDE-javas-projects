@@ -17,9 +17,9 @@ class LargestSortedStringTest {
     @Test
     public void test1a() {
         System.out.println("longest Fixed Tests");
-        assertEquals("aehrsty", LargestSortedString.longestv2("aretheyhere", "yestheyarehere"));
-        assertEquals("abcdefghilnoprstu", LargestSortedString.longestv2("loopingisfunbutdangerous", "lessdangerousthancoding"));
-        assertEquals("acefghilmnoprstuy", LargestSortedString.longestv2("inmanylanguages", "theresapairoffunctions"));
+        assertEquals("aehrsty", LargestSortedString.longestV2("aretheyhere", "yestheyarehere"));
+        assertEquals("abcdefghilnoprstu", LargestSortedString.longestV2("loopingisfunbutdangerous", "lessdangerousthancoding"));
+        assertEquals("acefghilmnoprstuy", LargestSortedString.longestV2("inmanylanguages", "theresapairoffunctions"));
     }
 
     @Test
