@@ -20,6 +20,21 @@ public class LargestSortedString {
         return result.toString();
     }
 
+    public static String longestv2 (String s1, String s2) {
+        String newString = s1 + s2;
+        char[] chars = newString.toCharArray();
+        Arrays.sort(chars);
+        StringBuilder sb = new StringBuilder();
+        char prevChar = 0;
+        for (char currentChar : chars) {
+            if (currentChar != prevChar) {
+                sb.append(currentChar);
+                prevChar = currentChar;
+            }
+        }
+        return sb.toString();
+    }
+
     public static String oneLineSolution(String s1, String s2) {
         return (s1 + s2).chars()
                 .distinct()
