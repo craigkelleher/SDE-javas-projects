@@ -7,9 +7,9 @@ package com.galvanize;
 // return result String.
 
 public class RemoveStringSpaces {
-    public static String noSpaceStringBuilder(final String x) {
+    public static String noSpaceStringBuilder(final String s) {
         StringBuilder result = new StringBuilder();
-        for (char c : x.toCharArray()) {
+        for (char c : s.toCharArray()) {
             if (c != ' ') {
                 result.append(c);
             }
@@ -17,10 +17,10 @@ public class RemoveStringSpaces {
         return result.toString();
     }
 
-    public static String noSpaceConcatenation(final String x){
+    public static String noSpaceConcatenation(final String s){
         String result = "";
-        for (int i = 0; i < x.length(); i++) {
-            char c = x.charAt(i);
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
             if (c != ' ') {
                 result += c;
             }
@@ -28,7 +28,7 @@ public class RemoveStringSpaces {
         return result;
     }
 
-    public static String noSpaceRegex(final String x) {
-        return x.replaceAll("\\s+", "");
+    public static String noSpaceRegex(final String s) {
+        return s.replaceAll("\\s+", "");
     }
 }
