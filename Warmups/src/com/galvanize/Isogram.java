@@ -42,7 +42,6 @@ public class Isogram {
     // in the worst case, and O(n) in the average case.
     // count():     O(n)
 
-
     public static boolean isIsogramWithHashSet(String str) {
         Set<Character> letters = new HashSet<>();
         for (int i = 0; i < str.length(); ++i) {
